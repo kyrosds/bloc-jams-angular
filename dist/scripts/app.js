@@ -1,5 +1,3 @@
-"use strict";
-
 (function () {
     function config($stateProvider, $locationProvider) {
         $locationProvider
