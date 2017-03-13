@@ -85,6 +85,12 @@
         SongPlayer.currentTime = null;
         
         /** 
+        * @desc volume object sets the current volume
+        * @type {number}
+        */
+        SongPlayer.volume = 25;
+        
+        /** 
         * @function SongPlayer.play
         * @desc plays the currently selected song and stops the currently selected song depending on if the play or pause button is selected
         * @param {object} song
@@ -161,6 +167,16 @@
             }
         };
         
+        /**
+        * @function SongPlayer.setVolume
+        * @desc sets the current volume
+        * @param {number} volume
+        */
+        SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
+        }        
         return SongPlayer;
     }
     
